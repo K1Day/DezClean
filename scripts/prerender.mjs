@@ -8,9 +8,11 @@ import { writeFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const PORT = 4173;
-const URL = `http://localhost:${PORT}/`;
+// 127.0.0.1, not "localhost" — Node's fetch can try ::1 first in some
+// container environments, where vite preview isn't listening.
+const URL = `http://127.0.0.1:${PORT}/`;
 
-async function waitForServer(url, timeoutMs = 20000) {
+async function waitForServer(url, timeoutMs = 30000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     try {
@@ -24,7 +26,7 @@ async function waitForServer(url, timeoutMs = 20000) {
   throw new Error(`Server at ${url} did not start in time`);
 }
 
-const preview = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
+const preview = spawn('npx', ['vite', 'preview', '--host', '127.0.0.1', '--port', String(PORT), '--strictPort'], {
   stdio: 'inherit',
 });
 
