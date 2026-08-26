@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="ftr__top">
           <div className="ftr__brand">
             <img className="ftr__logo" src="/assets/dez-clean-logo.jpeg" alt="DEZ CLEAN SERVICES — клининг в Алматы" loading="lazy" />
-            <p>Профессиональный клининг коммерческих объектов в Алматы. Работаем с 2020 года.</p>
+            <p>Профессиональный клининг коммерческих объектов в Алматы и Алматинской области. Работаем с 2020 года.</p>
           </div>
           <div className="ftr__col">
             <h5>Услуги</h5>
@@ -22,11 +22,11 @@ export default function Footer() {
             <a href="tel:+77477008252">+7 747 700-82-52</a>
             <a href="mailto:info@dezclean.kz">info@dezclean.kz</a>
             <a href="https://wa.me/77477008252" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="#">Алматы, ежедневно 08–22</a>
+            <a href="#">Алматы и область, ежедневно 08–22</a>
           </div>
         </div>
         <div className="ftr__bottom">
-          <span>© 2026 DEZ CLEAN SERVICES. Алматы.</span>
+          <span>© 2026 DEZ CLEAN SERVICES. Алматы, Казахстан.</span>
           <div className="ftr__social">
             <a href="https://www.instagram.com/pro.dcs" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
             <a href="https://wa.me/77477008252" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} /></a>

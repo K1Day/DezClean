@@ -11,7 +11,7 @@ export default function CTA({ onBook }) {
           <Button variant="primary" size="lg" onClick={onBook} iconRight={<ArrowUpRight size={18} />}>
             Оставить заявку
           </Button>
-          <div className="note">Работаем по всему Алматы · Пн–Вс, 08:00–22:00 · Объекты от 500 м²</div>
+          <div className="note">Работаем в Алматы и Алматинской области · Пн–Вс, 08:00–22:00 · Объекты от 500 м²</div>
         </div>
       </div>
     </section>

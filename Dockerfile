@@ -1,9 +1,13 @@
 # ---- Build stage ----
-FROM node:20-alpine AS build
+# Debian-based (not alpine) because the build runs a headless Chromium
+# via Playwright to prerender index.html for crawlers — Playwright's
+# bundled Chromium needs glibc.
+FROM node:20-bookworm-slim AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm ci
+RUN npx playwright install --with-deps chromium
 
 COPY . .
 RUN npm run build

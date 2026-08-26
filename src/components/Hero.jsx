@@ -32,14 +32,14 @@ export default function Hero({ onBook }) {
         <div className="hero__grid">
           <div className="hero__copy">
             <div className="hero__eyebrow">
-              <Badge tone="solid">Коммерческий клининг · Алматы</Badge>
+              <Badge tone="solid">Коммерческий клининг · Алматы и область</Badge>
             </div>
             <h1>
               Чистота<br />промышленного<br />масштаба — <span className="accent">точно в срок</span>
             </h1>
             <p className="hero__sub">
-              Клининг офисов, коворкингов, торговых центров и складских комплексов.
-              Работаем с объектами от 500 м² по SLA-договору.
+              Клининг офисов, коворкингов, торговых центров и складских комплексов
+              в Алматы и Алматинской области. Работаем с объектами от 500 м² по SLA-договору.
             </p>
             <div className="hero__actions">
               <Button variant="primary" size="lg" onClick={onBook} iconRight={<ArrowUpRight size={18} />}>
