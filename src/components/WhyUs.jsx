@@ -13,13 +13,16 @@ export default function WhyUs() {
   return (
     <section className="section section--mist" id="why">
       <div className="wrap why__grid">
-        <div className="why__media">
-          <div className="photo ph-cw"><span className="tag">Сертифицированный персонал</span></div>
+        <div className="why__media reveal">
+          <div className="photo ph-cw">
+            <img src="/assets/photos/whyus-staff.jpg" alt="Сертифицированный персонал DEZ CLEAN" loading="lazy" />
+            <span className="tag">Сертифицированный персонал</span>
+          </div>
         </div>
         <div>
           <Badge tone="eyebrow">Почему DEZ CLEAN</Badge>
           <h2 className="why__heading">Надёжный партнёр для бизнеса</h2>
-          <div className="why__list">
+          <div className="why__list reveal-stagger">
             {WHY.map(({ icon: Icon, t, d }) => (
               <div className="why__item" key={t}>
                 <span className="ic"><Icon size={22} /></span>

@@ -22,12 +22,12 @@ export default function Steps() {
   return (
     <section className="section" id="how">
       <div className="wrap">
-        <div className="shead">
+        <div className="shead reveal">
           <Badge tone="eyebrow">Как работаем</Badge>
           <h2>Четыре шага до чистоты</h2>
           <p>Прозрачный процесс без лишних звонков и согласований.</p>
         </div>
-        <div className="steps__grid">
+        <div className="steps__grid reveal-stagger">
           {STEPS.map((s) => (
             <Step key={s.n} {...s} />
           ))}

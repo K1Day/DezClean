@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import Button from './ui/Button.jsx';
 
 const NAV_LINKS = [
   { href: '#services', label: 'Услуги' },
-  { href: '#pricing', label: 'Цены' },
   { href: '#how', label: 'Как работаем' },
   { href: '#why', label: 'О нас' },
   { href: '#contacts', label: 'Контакты' },
@@ -12,6 +11,14 @@ const NAV_LINKS = [
 
 export default function Header({ onBook }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const closeAndRun = (fn) => () => {
     setOpen(false);
@@ -19,7 +26,7 @@ export default function Header({ onBook }) {
   };
 
   return (
-    <header className={`hdr${open ? ' is-open' : ''}`}>
+    <header className={`hdr${open ? ' is-open' : ''}${scrolled ? ' is-scrolled' : ''}`}>
       <div className="wrap hdr__in">
         <a className="hdr__logo" href="#top">
           <img src="/assets/dez-clean-logo.jpeg" alt="DEZ CLEAN SERVICES — клининг в Алматы" />
@@ -30,8 +37,8 @@ export default function Header({ onBook }) {
           ))}
         </nav>
         <div className="hdr__cta">
-          <Button variant="outline" size="sm" as="a" href="tel:+77001234567" iconLeft={<Phone size={16} />}>
-            +7 700 123-45-67
+          <Button variant="outline" size="sm" as="a" href="tel:+77477008252" iconLeft={<Phone size={16} />}>
+            +7 747 700-82-52
           </Button>
           <Button variant="primary" size="sm" onClick={onBook}>Получить расчёт</Button>
           <button className="hdr__burger" aria-label="Меню" onClick={() => setOpen((v) => !v)}>
@@ -43,8 +50,8 @@ export default function Header({ onBook }) {
         {NAV_LINKS.map((l) => (
           <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
         ))}
-        <Button variant="outline" size="sm" as="a" href="tel:+77001234567" iconLeft={<Phone size={16} />}>
-          +7 700 123-45-67
+        <Button variant="outline" size="sm" as="a" href="tel:+77477008252" iconLeft={<Phone size={16} />}>
+          +7 747 700-82-52
         </Button>
         <Button variant="primary" size="sm" onClick={closeAndRun(onBook)}>Получить расчёт</Button>
       </div>
