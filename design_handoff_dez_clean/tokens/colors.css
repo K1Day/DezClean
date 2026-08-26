@@ -1,0 +1,74 @@
+/* ============================================================
+   DEZ CLEAN — Color tokens
+   Cool, professional palette taken from the logo:
+   deep navy, bright swoosh-blue, light steel-blue, crisp white.
+   B2B commercial cleaning — clean, trustworthy, modern.
+   ============================================================ */
+
+:root {
+  /* ---- Paper / neutral surfaces (cool off-whites & mists) ---- */
+  --paper:        #F3F7FB; /* primary page background — cool off-white */
+  --paper-raised: #FFFFFF; /* cards — crisp white (clean-brand) */
+  --mist:         #E8F0F8; /* secondary surface / section fill */
+  --mist-deep:    #D8E4F0; /* deeper mist, sunken wells */
+  --steel:        #C5D4E4; /* strongest cool neutral */
+
+  /* ---- Ink (cool navy text) ---- */
+  --ink:        #0C1C30; /* primary text & headings — deep navy */
+  --ink-soft:   #3C4D63; /* secondary text / body */
+  --ink-muted:  #6E7E92; /* captions, meta, placeholders */
+  --ink-faint:  #A9B7C7; /* disabled, faint dividers */
+
+  /* ---- Blue (primary accent — the logo swoosh) ---- */
+  --blue:       #2E80D8;
+  --blue-deep:  #1E63B4; /* hover / pressed / text on light */
+  --blue-soft:  #B7D4F0; /* soft fills, borders */
+  --blue-wash:  #E7F1FB; /* tinted section background */
+  --blue-ink:   #1A4E89; /* blue text that must read as text */
+
+  /* ---- Navy (secondary accent — dark brand surfaces) ---- */
+  --navy:       #102D4C;
+  --navy-deep:  #0A1B2E; /* deepest — hero / footer ground */
+  --navy-soft:  #B4C2D4; /* soft fills, borders */
+  --navy-wash:  #E3EAF2; /* tinted section background */
+  --navy-ink:   #0C2138; /* navy text */
+
+  /* ---- Sky (light-blue highlight — "SERVICES" tint, sparkles) ---- */
+  --sky:        #5AA0E6;
+
+  /* ---- Lines & dividers ---- */
+  --line:        #DBE5F0; /* default hairline border */
+  --line-strong: #C6D4E3; /* stronger divider */
+
+  /* ---- Feedback ---- */
+  --positive:      #2E9E6B;
+  --positive-wash: #E1F2EA;
+  --warning:       #C98A2E;
+  --danger:        #C8503F;
+  --danger-wash:   #F7E2DD;
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components & layouts
+     ============================================================ */
+  --bg:              var(--paper);
+  --bg-alt:          var(--mist);
+  --surface-card:    var(--paper-raised);
+  --surface-sunken:  var(--mist-deep);
+  --surface-accent:  var(--blue-wash);
+  --surface-accent-2:var(--navy-wash);
+
+  --text-strong:     var(--ink);
+  --text-body:       var(--ink-soft);
+  --text-muted:      var(--ink-muted);
+  --text-on-accent:  #FFFFFF;
+
+  --accent:          var(--blue);
+  --accent-hover:    var(--blue-deep);
+  --accent-2:        var(--navy);
+  --accent-2-hover:  var(--navy-deep);
+
+  --border:          var(--line);
+  --border-strong:   var(--line-strong);
+
+  --focus-ring:      color-mix(in oklch, var(--blue) 50%, transparent);
+}

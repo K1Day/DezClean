@@ -1,0 +1,12 @@
+/* ============================================================
+   DEZ CLEAN — Fonts
+   Display: Sora (geometric, modern, trustworthy — matches the
+            logo's clean-tech wordmark)
+   Body:    DM Sans (humanist sans, comfortable for UI & copy)
+   ------------------------------------------------------------
+   NOTE: loaded from the Google Fonts CDN rather than self-hosted
+   binaries. Drop .woff2 files into assets/fonts/ and swap the
+   @import for local @font-face rules if you need offline use.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');

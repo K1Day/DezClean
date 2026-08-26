@@ -1,0 +1,98 @@
+/* ============================================================
+   DEZ CLEAN — Base reset + element defaults
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin: 0 0 0.4em;
+}
+
+p { margin: 0 0 1em; }
+
+a { color: var(--blue-deep); text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+button { font: inherit; }
+
+::selection { background: var(--blue-soft); color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-body); font-weight: 600; white-space: nowrap;
+  border-radius: var(--radius-pill); cursor: pointer; border: 1px solid transparent;
+  text-decoration: none; transition: background var(--dur-fast) var(--ease-soft), color var(--dur-fast) var(--ease-soft), border-color var(--dur-fast) var(--ease-soft), transform var(--dur-fast) var(--ease-out);
+}
+.btn svg { width: 1em; height: 1em; }
+.btn:active { transform: scale(.978); }
+.btn--sm { font-size: 15px; padding: .55em 1.15em; }
+.btn--md { font-size: 16px; padding: .7em 1.4em; }
+.btn--lg { font-size: 17px; padding: .9em 1.7em; }
+.btn--block { width: 100%; }
+.btn--primary { background: var(--blue); color: #fff; }
+.btn--primary:hover { background: var(--blue-deep); }
+.btn--outline { background: transparent; border-color: var(--line-strong); color: var(--ink); }
+.btn--outline:hover { border-color: var(--blue); color: var(--blue-deep); }
+.btn--ghost { background: transparent; color: var(--ink-soft); }
+.btn--ghost:hover { color: var(--ink); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* ---------- Badge ---------- */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-body); font-size: var(--fs-caption); font-weight: 600;
+  border-radius: var(--radius-pill); padding: .45em 1em;
+}
+.badge svg { width: 14px; height: 14px; }
+.badge--solid { background: var(--blue); color: #fff; }
+.badge--eyebrow { background: none; padding: 0; color: var(--blue-deep); text-transform: uppercase; letter-spacing: var(--ls-wider); font-size: var(--fs-caption); }
+.badge--blue { background: var(--blue-wash); color: var(--blue-deep); }
+.badge--navy { background: var(--navy-wash); color: var(--navy); }
+.badge--neutral { background: var(--mist); color: var(--ink-soft); }
+.badge--outline { background: transparent; border: 1px solid var(--line-strong); color: var(--ink-soft); }
+
+/* ---------- Input ---------- */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field__label { font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 600; color: var(--ink); }
+.field__control {
+  font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink);
+  background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius-md);
+  padding: .8em 1em; transition: border-color var(--dur-fast) var(--ease-soft), box-shadow var(--dur-fast) var(--ease-soft);
+}
+.field__control::placeholder { color: var(--ink-faint); }
+.field__control:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 50%, transparent); }
+.field__control[data-multiline] { resize: vertical; min-height: 6em; }
+textarea.field__control { resize: vertical; min-height: 6em; }
+.field__hint { font-family: var(--font-body); font-size: var(--fs-caption); color: var(--ink-muted); }

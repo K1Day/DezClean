@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du -sh public src)",
+      "Bash(du -sh node_modules)"
+    ]
+  }
+}
