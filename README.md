@@ -4,7 +4,7 @@ One-page B2B landing site for **DEZ CLEAN SERVICES**, a commercial cleaning comp
 The site targets facility managers of offices, business centers, coworkings, malls, warehouses and hotels,
 and collects cleaning requests through a booking form.
 
-**Live:** https://dezclean.com.kz
+**Production domain:** https://dezclean.com.kz
 
 ## Features
 
