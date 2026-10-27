@@ -1,0 +1,15 @@
+name: Check README content
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify README is not empty
+        run: test -s README.md
