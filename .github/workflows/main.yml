@@ -1,0 +1,12 @@
+name: test workflow
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run test
+        run: echo "Test passed"
