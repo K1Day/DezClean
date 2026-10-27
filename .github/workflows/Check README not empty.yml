@@ -1,4 +1,4 @@
-name: Check README content
+name: Check README 
 
 on:
   push:
@@ -11,5 +11,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify README is not empty
-        run: test -s README.md
+      - name: Verify README 
+        run: grep "project" README.md
