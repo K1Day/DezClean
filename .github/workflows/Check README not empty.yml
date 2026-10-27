@@ -11,5 +11,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify README 
+      - name: Check README 
         run: grep "project" README.md
